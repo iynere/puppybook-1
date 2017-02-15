@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class SinglePuppy extends Component {
-
-  render () {
-    return (
-      <div>
-        <h2>PUPPY NAME GOES HERE</h2>
-        <div>
-          <img src="http://placehold.it/400x400" />
-        </div>
-      </div>
-    )
-  }
-}
+export default props => {
+	const pup = props.selectedPup;
+	
+	return (
+		<div>
+			<h2>{pup && pup.name}</h2>
+			<div>
+				<img src={pup && pup.image} />
+			</div>
+		</div>
+	);
+};
