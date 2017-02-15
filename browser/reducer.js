@@ -1,8 +1,4 @@
-const initialState = {
-	allPuppies: []
-};
-
-export default (state = initialState, action) => {
+export default (state = {allPuppies: []}, action) => {
 	
 	const newState = Object.assign({}, state);
 	

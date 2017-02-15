@@ -6,12 +6,14 @@ export default class extends Component {
 	}
 	
 	render() {
+		const puppies = this.props.allPuppies;
+		
 		return (
 			<div className="container flexbox-container">
 				<div className="jumbotron">
 					<ul className="list-unstyled">
-						{ this.props.allPuppies &&
-							this.props.allPuppies.map(pup => (
+						{
+							puppies && puppies.map(pup => (
 								<li key={pup.id}><a href="#">{pup.name}</a></li>	
 							))
 						}

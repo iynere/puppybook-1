@@ -2,12 +2,11 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import store from './store';
-
-import AllPuppiesContainer from './AllPuppiesContainer';
 import {fetchPups} from './action-creators';
+import AllPuppiesContainer from './AllPuppiesContainer';
 
 const onEnter = () => {
 	store.dispatch(fetchPups());
